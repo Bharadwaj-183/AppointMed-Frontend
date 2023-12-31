@@ -1,0 +1,68 @@
+.search-container {
+  position: relative;
+}
+
+.search-container {
+  position: relative;
+  display: inline-block;
+}
+
+.search-input {
+  width: 150px;
+  padding: 5px;
+  margin: 5px;
+}
+
+button.clear-button {
+  background: white;
+  font-size: 14px;
+  color: black;
+  padding: 5px;
+  margin-left: 5px;
+}
+
+button.search-button {
+  cursor: pointer;
+  border: none;
+  background: white;
+  font-size: 14px;
+  color: black;
+  margin-left: 5px;
+  height: 40px;
+  padding: 5px;
+}
+
+#appointmentsTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+#appointmentsTable th,
+#appointmentsTable td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+#appointmentsTable th {
+  background-color: #a9c97e;
+  font-size: 20px;
+}
+
+#appointmentsTable td {
+  font-size: 16px;
+}
+
+#appointmentsTable tr:hover {
+  background-color: #a9c97e;
+}
+
+.appointment-heading {
+  margin-top: 0;
+}
+
+.appointment-div {
+  padding: 0;
+  justify-content: baseline;
+}

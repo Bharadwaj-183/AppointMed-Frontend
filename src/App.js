@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { Routes } from "react-router-dom";
 
-function App() {
+import WelcomePage from "./components/WelcomePage";
+import BookingPage from "./components/Booking";
+import StatsPage from "./components/Stats";
+import DoctorStats from "./components/DoctorStats";
+import NavBar from "./components/Navbar";
+
+import "../src/WelcomePage.css";
+
+const App = () => {
+  const [loggedIn, setLoggedIn] = useState(false);
+  const [selectedTab, setSelectedTab] = useState("welcome");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div style={{ paddingTop: "80px" }}>
+        <NavBar setSelectedTab={setSelectedTab} />
+
+        <div className="content-container" style={{ paddingTop: "10px" }}>
+          {selectedTab === "welcome" && <WelcomePage />}
+          {selectedTab === "booking" && <BookingPage />}
+          {selectedTab === "stats" && <StatsPage />}
+          {selectedTab === "doctorstats" && <DoctorStats />}
+        </div>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;

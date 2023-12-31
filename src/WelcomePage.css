@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@300;900&family=Pangolin&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  background: url("../public/AMBG2.png") center/cover no-repeat fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+
+  font-family: "Jost", sans-serif;
+  color: white;
+}
+
+.welcome-heading {
+  color: white;
+  font-family: "Jost", sans-serif;
+  font-size: 3em;
+  margin: 0;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s, transform 1s;
+  margin: 0;
+  padding: 0;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+a {
+  color: #a9c97e;
+}

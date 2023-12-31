@@ -1,0 +1,31 @@
+.doctor-stats-div {
+  max-width: 900px;
+  margin: 20px auto;
+}
+
+.doctor-stats-heading {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+#doctorStatsTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+#doctorStatsTable th,
+#doctorStatsTable td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  font-size: 18px;
+}
+
+#doctorStatsTable th {
+  background-color: #a9c97e;
+}
+
+#doctorStatsTable tbody tr:hover {
+  background-color: #a9c97e;
+}
