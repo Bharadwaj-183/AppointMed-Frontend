@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../WelcomePage.css";
 
 import { Link } from "react-router-dom";
+
 const WelcomePage = () => {
   // Retrieve the login state from localStorage on component mount
   const [loggedIn, setLoggedIn] = useState(
@@ -9,6 +10,7 @@ const WelcomePage = () => {
   );
 
   useEffect(() => {
+    // localStorage.setItem("loggedIn", false);
     const timerId = setTimeout(() => {
       const welcomeHeading = document.querySelector(".welcome-heading");
       if (welcomeHeading) {

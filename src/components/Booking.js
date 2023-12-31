@@ -14,13 +14,16 @@ const Booking = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:3000/submitForm", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        "https://appoint-med-backend.vercel.app/submitForm",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
 
       if (!response.ok) {
         throw new Error("Form submission failed");

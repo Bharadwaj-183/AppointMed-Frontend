@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import { Routes } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 
 import WelcomePage from "./components/WelcomePage";
 import BookingPage from "./components/Booking";
@@ -11,7 +10,6 @@ import NavBar from "./components/Navbar";
 import "../src/WelcomePage.css";
 
 const App = () => {
-  const [loggedIn, setLoggedIn] = useState(false);
   const [selectedTab, setSelectedTab] = useState("welcome");
 
   return (

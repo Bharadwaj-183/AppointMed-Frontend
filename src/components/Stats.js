@@ -2,7 +2,20 @@ import React, { useEffect, useState } from "react";
 import "../Stats.css";
 const fetchAppointments = async () => {
   try {
-    const response = await fetch("http://localhost:3000/getAppointments");
+    // const response = await fetch(
+    //   "https://appoint-med-backend-rokc9ehrd-bharadwaj-183.vercel.app/getAppointments"
+    // );
+    const response = await fetch(
+      "https://appoint-med-backend.vercel.app/getAppointments",
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    console.log("response in stats.js", response);
+
     const { data } = await response.json();
     return data;
   } catch (error) {
@@ -47,6 +60,7 @@ const Stats = () => {
     const fetchData = async () => {
       const data = await fetchAppointments();
       setAppointments(data);
+      console.log("appointmets got", appointments);
       populateAppointmentsTable(data); // Populate the full table initially
     };
     fetchData();
@@ -57,14 +71,6 @@ const Stats = () => {
       // If search term is empty, show all entries
       populateAppointmentsTable(appointments);
     } else {
-      // If search term is not empty, filter appointments based on doctor's name
-      // const filteredAppointments = appointments.filter((appointment) =>
-      //   appointment.Username_doctor.toLowerCase().includes(
-      //     searchTerm.toLowerCase()
-      //   )
-      // );
-      // populateAppointmentsTable(filteredAppointments);
-
       const filteredAppointments = appointments.filter((appointment) => {
         const word = searchTerm.toLowerCase();
 

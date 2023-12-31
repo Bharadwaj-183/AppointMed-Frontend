@@ -13,7 +13,9 @@ const dicEmail = {
 };
 const fetchDoctorStats = async () => {
   try {
-    const response = await fetch("http://localhost:3000/getAppointments");
+    const response = await fetch(
+      "https://appoint-med-backend.vercel.app/getAppointments"
+    );
     const { data } = await response.json();
 
     // Calculate total earning for each doctor
