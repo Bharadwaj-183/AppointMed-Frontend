@@ -19,11 +19,22 @@ body {
   font-family: "Jost", sans-serif;
   font-size: 3em;
   margin: 0;
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 1s, transform 1s;
+  /* opacity: ; */
+  /* transform: translateY(50px); */
+  /* transition: opacity 1s, transform 1s; */
+  animation: show 2s;
   margin: 0;
   padding: 0;
+}
+@keyframes show {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }
 
 .show {
@@ -33,4 +44,13 @@ body {
 
 a {
   color: #a9c97e;
+}
+
+.welcomecontainer {
+  /* border: 1px solid; */
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }

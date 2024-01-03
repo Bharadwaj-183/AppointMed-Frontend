@@ -6,7 +6,7 @@ import BookingPage from "./components/Booking";
 import StatsPage from "./components/Stats";
 import DoctorStats from "./components/DoctorStats";
 import NavBar from "./components/Navbar";
-
+import "../src/App.css";
 import "../src/WelcomePage.css";
 
 const App = () => {
@@ -14,15 +14,15 @@ const App = () => {
 
   return (
     <Router>
-      <div style={{ paddingTop: "80px" }}>
+      <div className="appcontainer">
         <NavBar setSelectedTab={setSelectedTab} />
 
-        <div className="content-container" style={{ paddingTop: "10px" }}>
+        <span className="content-container">
           {selectedTab === "welcome" && <WelcomePage />}
           {selectedTab === "booking" && <BookingPage />}
           {selectedTab === "stats" && <StatsPage />}
           {selectedTab === "doctorstats" && <DoctorStats />}
-        </div>
+        </span>
       </div>
     </Router>
   );

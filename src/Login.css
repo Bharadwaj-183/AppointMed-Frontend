@@ -1,0 +1,63 @@
+.logincontainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 90vw;
+  justify-content: space-around;
+}
+
+/* #loginForm,
+#signupForm {
+  border: 1px solid;
+} */
+/* 
+.newuserlabel {
+  border: 1px solid;
+} */
+
+.signupemail,
+.signuppassword {
+  background-color: transparent;
+  color: white;
+  border: 2px solid rgba(212, 209, 209, 0.514);
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+.signupemail:focus,
+.signuppassword:focus {
+  outline: 0px transparent;
+  border: 2px solid rgb(212, 209, 209);
+}
+
+.submitbutton {
+  background-color: transparent;
+  border: 2px solid rgba(212, 209, 209, 0.514);
+  color: white;
+}
+
+.submitbutton:hover {
+  background-color: #a9c97e;
+}
+
+@media (max-width: 900px) {
+  .logincontainer {
+    align-items: center;
+    width: 90vw;
+    flex-direction: column;
+    justify-content: space-around;
+    /* border: 2px solid; */
+    overflow: auto;
+    height: 90vh;
+    flex-wrap: nowrap;
+    padding-top: 30px;
+  }
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.errortext {
+  color: rgb(240, 72, 72);
+  font-size: 20px;
+}

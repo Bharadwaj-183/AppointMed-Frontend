@@ -16,6 +16,7 @@ const Booking = () => {
     try {
       const response = await fetch(
         "https://appoint-med-backend.vercel.app/submitForm",
+        // "http://localhost:3001/submitForm",
         {
           method: "POST",
           headers: {
@@ -64,6 +65,7 @@ const Booking = () => {
     <form onSubmit={handleSubmit}>
       <label>Name:</label>
       <input
+        className="bookinginput"
         type="text"
         name="customerName"
         value={formData.customerName}
@@ -74,6 +76,7 @@ const Booking = () => {
       <label>
         Phone Number:
         <input
+          className="bookinginput"
           type="tel"
           name="customerPhoneNumber"
           value={formData.customerPhoneNumber}
@@ -85,6 +88,7 @@ const Booking = () => {
       <label>
         Problem type:
         <select
+          className="bookingselect"
           name="problem"
           value={formData.problem}
           onChange={handleChange}
@@ -105,6 +109,7 @@ const Booking = () => {
       <label>
         Consultation Type:
         <select
+          className="bookingselect"
           name="consultationType"
           value={formData.consultationType}
           onChange={handleChange}
@@ -119,6 +124,7 @@ const Booking = () => {
       <label>
         Problem:
         <input
+          className="bookinginput"
           type="text"
           name="inputProblem"
           value={formData.inputProblem}
@@ -128,6 +134,7 @@ const Booking = () => {
       </label>
       <label>Problem since:</label>
       <input
+        className="bookinginput"
         type="text"
         name="duration"
         value={formData.duration}
@@ -136,13 +143,16 @@ const Booking = () => {
       <br></br>
       <label>Email</label>
       <input
+        className="bookinginput"
         type="email"
         name="customerEmail"
         value={formData.customerEmail}
         onChange={handleChange}
         required
       />
-      <button type="submit">Submit</button>
+      <button className="bookingsubmit" type="submit">
+        Submit
+      </button>
     </form>
   );
 };

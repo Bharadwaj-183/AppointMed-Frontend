@@ -32,3 +32,36 @@ button {
 button:hover {
   background-color: #2980b9;
 }
+
+.bookinginput,
+.bookingselect {
+  background-color: transparent;
+  border-radius: 10px;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.541);
+  height: 35px;
+}
+
+.bookinginput:focus {
+  border: 2px solid white;
+  outline: none;
+}
+
+.bookingsubmit {
+  outline: 1px solid white;
+  background-color: transparent;
+  color: white;
+  border: none;
+  transition: 0.4s;
+}
+
+.bookingsubmit:hover {
+  outline-offset: 15px;
+  background-color: white;
+  color: black;
+  outline-color: transparent;
+}
+
+option {
+  color: black;
+}

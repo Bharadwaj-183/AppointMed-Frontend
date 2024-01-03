@@ -1,0 +1,18 @@
+.appcontainer {
+  width: 100vw;
+  min-height: 100vh;
+  max-height: max-content;
+  background: url("../public/AMBG2.png") center/cover no-repeat fixed;
+  /* border: 1px solid blue; */
+  display: flex;
+  flex-direction: column;
+}
+
+.content-container {
+  height: 100%;
+  width: 100%;
+  /* border: 5px solid red; */
+}
+::-webkit-scrollbar {
+  display: none;
+}

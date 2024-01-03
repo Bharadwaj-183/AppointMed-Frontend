@@ -7,6 +7,7 @@ const fetchAppointments = async () => {
     // );
     const response = await fetch(
       "https://appoint-med-backend.vercel.app/getAppointments",
+      // "http://localhost:3001/getAppointments",
       {
         method: "GET",
         headers: {

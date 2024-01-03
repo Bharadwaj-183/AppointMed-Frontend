@@ -15,6 +15,7 @@ const fetchDoctorStats = async () => {
   try {
     const response = await fetch(
       "https://appoint-med-backend.vercel.app/getAppointments"
+      // "http://localhost:3001/getAppointments"
     );
     const { data } = await response.json();
 
