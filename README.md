@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+AppointMed is an online doctor appointment booking application developed using MERN stack. It provides the users with oppurtunity to register and book appointment for doctors across various departments within few clicks at their comfort.
+It also provides statistics regarding the appointments booked till date and also statistics regarding doctors, their bookings and earnings.
+Easy Navigation at top is provided for quick and easy accessibility.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The schema used to store data in database is
 
-## Available Scripts
+{
+Username_doctor: String,
+accId: String,
+doctorEmail: String,
+doctorTimezone: String,
+bookedServicesData: [{
+bookingId: String,
+orderId: String,
+customerEmail: String,
+customerPhoneNumber: String,
+customerName: String,
+amount: Number,
+currency: String,
+serviceTitle: String,
+serviceCategory: String,
+serviceNumber: Number,
+isServicePackage: Boolean,
+packageValidity: String,
+transactionId: String,
+isRescheduled: Boolean,
+isCancelled: Boolean,
+numberOfReschedules: Number,
+rescheduledBy: String,
+questionObj: [{
+question: String,
+answer: String
+}],
+contextQuestion: [{
+question: String,
+answer: String
+}],
+transactionStatus: String,
+bookingStatus: String,
+meetingStartTime: String,
+meetingEndTime: String,
+date: {
+day: Number,
+month: String,
 
-In the project directory, you can run:
+weekDay: String
+},
+customerTimezone: String,
+location: {
+country: String,
+city: String,
+state: String
+},
+isPaymentSuccessful: Boolean,
+correlationId: String,
+}]
+};
 
-### `npm start`
+The application is live at https://appointmed.netlify.app/
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Backend is hosted on vercel and frontend at netlify.
