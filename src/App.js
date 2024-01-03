@@ -11,14 +11,19 @@ import "../src/WelcomePage.css";
 
 const App = () => {
   const [selectedTab, setSelectedTab] = useState("welcome");
+  const [isLoggedIn, setLoggedIn] = useState(
+    localStorage.getItem("token") !== ""
+  );
 
   return (
     <Router>
       <div className="appcontainer">
-        <NavBar setSelectedTab={setSelectedTab} />
+        <NavBar setSelectedTab={setSelectedTab} isLoggedIn={isLoggedIn} />
 
         <span className="content-container">
-          {selectedTab === "welcome" && <WelcomePage />}
+          {selectedTab === "welcome" && (
+            <WelcomePage setLoggedIn={setLoggedIn} />
+          )}
           {selectedTab === "booking" && <BookingPage />}
           {selectedTab === "stats" && <StatsPage />}
           {selectedTab === "doctorstats" && <DoctorStats />}

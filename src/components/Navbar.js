@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../Navbar.css";
 
-const NavBar = ({ setSelectedTab }) => {
-  return (
+const NavBar = ({ setSelectedTab, isLoggedIn }) => {
+  return isLoggedIn ? (
     <div className="navbar">
       <Link to="/" onClick={() => setSelectedTab("welcome")}>
         Home
@@ -18,6 +18,8 @@ const NavBar = ({ setSelectedTab }) => {
         DoctorStats
       </Link>
     </div>
+  ) : (
+    ""
   );
 };
 

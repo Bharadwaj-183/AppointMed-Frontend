@@ -5,10 +5,15 @@ import { Link } from "react-router-dom";
 import Login from "./Login";
 import axios from "axios";
 
-const WelcomePage = () => {
+const WelcomePage = (props) => {
   // Retrieve the login state from localStorage on component mount
   const [loggedIn, setLoggedIn] = useState("");
+  const setLoggedIn2 = props.setLoggedIn;
   // var token = "";
+  useEffect(() => {
+    setLoggedIn2(localStorage.getItem("token") !== "");
+  }, [loggedIn]);
+
   useEffect(() => {
     const token = localStorage.getItem("token");
     console.log(token);

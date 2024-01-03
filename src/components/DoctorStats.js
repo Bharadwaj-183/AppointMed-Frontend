@@ -91,7 +91,9 @@ const DoctorStats = () => {
         </tbody>
       </table>
       <div className="total-earnings">
-        <strong>Total Earnings of All Doctors:</strong> {totalEarnings}
+        <strong>Total Number of doctors registered : </strong>
+        {8} <br></br>
+        <strong>Total Earnings of All Doctors : </strong> {totalEarnings}
       </div>
     </div>
   );

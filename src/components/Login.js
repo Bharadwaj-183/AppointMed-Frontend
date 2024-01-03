@@ -59,6 +59,7 @@ const Login = (props) => {
   return (
     <div className="logincontainer">
       <div>
+        <h1>Welcome to AppointMed!!</h1>
         <form
           id="loginForm"
           style={{ marginRight: "20px" }}
